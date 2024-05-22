@@ -21,7 +21,7 @@ namespace winrt::CursorTest::implementation
             // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
         }
 
-        winrt::fire_and_forget OnLoaded(IInspectable, IInspectable)
+        void OnLoaded(IInspectable, IInspectable)
         {
             auto protectedElement = TestStackPanel().try_as<IUIElementProtected>();
             if (protectedElement != nullptr)
